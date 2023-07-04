@@ -284,11 +284,18 @@ nav .halaman_aktif a {
 
 
 /* Myhero */
+
+* .Hero {
+    overflow: hidden;
+}
+
 .hero {
     height: 120vh;
     width: 100vw;
     background: url(asset/img/noise\ 1.jpg), rgba(5, 5, 5) 80% / cover no-repeat;
     background-blend-mode: overlay;
+
+    position: relative;
 
 
 
@@ -309,11 +316,10 @@ nav .halaman_aktif a {
 
     .heading {
         text-align: center;
-        max-width: 50vw;
-
         background: linear-gradient(138deg, #FFF 0%, rgba(255, 219, 94, 0.70) 21.43%, rgba(3, 255, 195, 0.54) 47.92%, rgba(71, 178, 255, 0.66) 80.43%, #aecee7 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        overflow: hidden;
     }
 
     .sub-heading {
@@ -322,6 +328,10 @@ nav .halaman_aktif a {
         margin: 20px auto;
     }
 
+    .heading h6 {
+        overflow: hidden;
+
+    }
 
 }
 
@@ -416,7 +426,7 @@ video {
         margin: 8px auto;
     }
 
-    .txt_sticky h3 {
+    .txt_sticky h2 {
         margin: 8px auto;
         background: linear-gradient(138deg, #e9deb7 0%, rgba(255, 219, 94, 0.70) 21.43%, rgba(3, 255, 195, 0.54) 47.92%, rgba(71, 178, 255, 0.66) 72.43%, #bbd6eb 100%);
         -webkit-background-clip: text;
@@ -523,7 +533,7 @@ video {
         align-items: start;
 
         .konten {
-            width: 45%;
+            width: 50%;
         }
 
         .foto {
@@ -532,31 +542,29 @@ video {
     }
 }
 
+.private h1 {
+    background: linear-gradient(138deg, #eee8d3 0%, rgba(255, 219, 94, 0.70) 21.43%, rgba(3, 255, 195, 0.54) 47.92%, rgba(71, 178, 255, 0.66) 72.43%, #bbd6eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-.private .foto img {
-    width: 100%;
+    margin: 24px auto;
 
 }
 
-.private .txt {
-    margin-top: 24px;
-
+.private {
     .txt2 {
-        margin-top: 32px;
+        margin: 28px auto;
+    }
 
-        .container_txt2 {
-            margin: 16px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .container_txt2 p {
-            margin-left: 8px;
-        }
+    .container_txt2 {
+        display: flex;
+        gap: 18px;
+        margin: 12px auto;
     }
 }
 
-#private hr {
+
+.private hr {
     border: none;
     background-color: var(--grey);
     height: 2px;
