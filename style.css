@@ -65,7 +65,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 85px;
     position: fixed;
     padding: 8px 80px;
     background: rgba(0, 0, 0, 0.3);
@@ -86,7 +86,7 @@ nav {
 
     .logo p {
         color: var(--grey2);
-        font-size: 18px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: 18px;
@@ -101,7 +101,7 @@ nav {
 
     .menu-nav li {
         margin: 0 12px;
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: 600;
         line-height: normal;
         position: relative;
@@ -404,7 +404,14 @@ video {
         box-sizing: border-box;
         border: 2px solid var(--grey3);
         border-radius: 16px;
+        transform: translateX(50vw);
+        transition: 0.5s ease all;
+        opacity: 0;
+    }
 
+    .active {
+        opacity: 1;
+        transform: translateX(0vw);
     }
 
     .sticky_card .halaman {
@@ -443,34 +450,69 @@ video {
 }
 
 
+
+
 /* End MyWhy */
 
 
 /* Fitur */
 
+
+
+
+
 .fitur {
-    padding-top: 100px;
+
+    margin-top: 50vh;
+
 
     .container {
         width: 80vw;
         margin: 0 auto;
     }
+
+
+
+
+    .heading {
+        width: 100%;
+        transform: translateX(-10vw);
+        opacity: 0;
+    }
+
+    .active1 .heading {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+
+    .subheading {
+        color: var(--grey);
+        transform: translateX(-10vw);
+    }
+
+    .active1 .subheading {
+        transform: translateX(0);
+    }
+
+    .card-fitur {
+        transform: translateX(20vw);
+    }
+
+    .active1 .card-fitur {
+        transform: translateX(0);
+    }
 }
+
+
 
 .fitur * {
     transition: 1s;
 }
 
-.fitur .container .tittle {
 
-    .subheading {
-        color: var(--grey);
-    }
 
-    .heading {
-        width: 100%;
-    }
-}
+
+
 
 .fitur .konten {
     display: grid;
@@ -488,8 +530,9 @@ video {
             margin-top: 32px;
         }
 
-        .txt h3 {
+        .txt h2 {
             margin-bottom: 16px;
+            color: var(--putih);
         }
     }
 
@@ -497,61 +540,130 @@ video {
         height: 360px;
         overflow: hidden;
         display: flex;
+        position: relative;
+    }
+
+
+    .foto::after {
+        width: 105%;
+        height: 105%;
+        content: "";
+        display: block;
+        background-color: var(--grey3);
+        position: absolute;
+        transition: 0.75s ease-out all;
+    }
+
+    .active .foto::after {
+        height: 0%;
     }
 
     .foto img {
         object-fit: cover;
         width: 100%;
+        transform: scale(2);
+        opacity: 0;
     }
+
+    .active .foto img {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .card-fitur:hover {
+        scale: 102%;
+
+    }
+
+
+
+    .card-fitur:hover img {
+        scale: 125%;
+    }
+
+
+
 }
 
-.card-fitur:hover {
-    scale: 102%;
 
-}
 
-.card-fitur:hover img {
-    scale: 125%;
-}
+
 
 /* End Fitur */
 
 
 /* MyPrivate */
 
-
+.private * {
+    transition: 1s ease all;
+}
 
 .private {
     width: 100vw;
     margin: 200px auto;
+
+
+    .active .foto {
+        background-color: red;
+    }
+
+    .foto {
+        width: 45%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .foto img {
+        transform: scale(2);
+    }
+
+    .foto::after {
+        width: 105%;
+        height: 105%;
+        content: "";
+        display: block;
+        background-color: var(--grey3);
+        position: absolute;
+        transition: 1s;
+
+    }
+
+    .active .foto::after {
+        height: 0%;
+    }
+
+    .active .foto img {
+        transform: scale(1);
+    }
+
 
     .container {
         width: 80vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        gap: 50px;
 
         .konten {
             width: 50%;
+
         }
 
-        .foto {
-            width: 50%;
+
+
+        .tittle {
+            margin-bottom: 28px;
         }
+
     }
 }
 
-.private h1 {
-    background: linear-gradient(138deg, #eee8d3 0%, rgba(255, 219, 94, 0.70) 21.43%, rgba(3, 255, 195, 0.54) 47.92%, rgba(71, 178, 255, 0.66) 72.43%, #bbd6eb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    margin: 24px auto;
-
-}
 
 .private {
+    /* background-color: red; */
+
     .txt2 {
         margin: 28px auto;
     }
@@ -559,18 +671,22 @@ video {
     .container_txt2 {
         display: flex;
         gap: 18px;
-        margin: 12px auto;
+        margin: 20px auto;
     }
 }
 
 
 .private hr {
+    width: 0%;
     border: none;
     background-color: var(--grey);
     height: 2px;
+    transition: 1s;
 }
 
-
+.private .active hr {
+    width: 100%;
+}
 
 /* End MyPrivate */
 

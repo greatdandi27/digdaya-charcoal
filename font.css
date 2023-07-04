@@ -257,7 +257,7 @@ p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 120%;
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.035rem;
     margin: 0px;
 
 
@@ -277,9 +277,9 @@ h1 {
 
 h2 {
     font-size: 1.700rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 120%;
-    letter-spacing: 0.02rem;
+    letter-spacing: 0.025rem;
 
     margin: 0px;
     color: var(--grey);
